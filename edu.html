@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #002D62;
+        }
+        .tab {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-right: 5px;
+            background-color: #f1f1f1;
+            cursor: pointer;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .tab.active {
+            background-color: #007bff;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: white;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Education Topics</h1>
+
+<div class="tabs">
+    <div class="tab active" onclick="showTabContent('learn-skills')">Learn Skills</div>
+    <div class="tab" onclick="showTabContent('leadership-development')">Leadership Development</div>
+    <div class="tab" onclick="showTabContent('self-development')">Self Development</div>
+</div>
+
+<div id="learn-skills" class="tab-content active">
+    <h2>Learn Skills</h2>
+    <p>Develop a broad range of skills, from technical to soft skills, to improve your career prospects and personal growth.
+        Also we have coding classes. if interested email us on <a href="#">codemy@gmail.com</a>
+    </p>
+</div>
+
+<div id="leadership-development" class="tab-content">
+    <h2>Leadership Development</h2>
+    <p>Leadership development focuses on improving leadership skills, helping individuals lead teams, make decisions, and inspire others.</p>
+</div>
+
+<div id="self-development" class="tab-content">
+    <h2>Self Development</h2>
+    <p>Self-development is the process of improving your skills, knowledge, and character for personal and professional growth.</p>
+</div>
+
+<script>
+    function showTabContent(tabId) {
+        // Hide all tab contents
+        var contents = document.querySelectorAll('.tab-content');
+        contents.forEach(function(content) {
+            content.classList.remove('active');
+        });
+        
+        // Remove active class from all tabs
+        var tabs = document.querySelectorAll('.tab');
+        tabs.forEach(function(tab) {
+            tab.classList.remove('active');
+        });
+        
+        // Show the selected tab content
+        document.getElementById(tabId).classList.add('active');
+        
+        // Add active class to the clicked tab
+        event.target.classList.add('active');
+    }
+</script>
+
+</body>
+</html>

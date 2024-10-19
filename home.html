@@ -1,0 +1,149 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        body {
+            background-color: #002D62;
+            height: 1300px;
+        }
+
+        .header {
+            color: whitesmoke;
+            font-weight: bold;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .outer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            row-gap: 5px;
+            column-gap: 2px;
+            border-radius: 20px;
+        }
+
+
+
+        .d1 {
+            color: black;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            border-radius: 20px;
+            padding: 10px;
+            margin-left: 10px;
+        }
+
+        .d1 :hover {
+            background-color: rgba(21, 45, 182, 0.884);
+            box-shadow: 0px 4px 8px white;
+            color: white;
+            transition: 0.3s ease;
+            cursor: pointer;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .login {
+            background-color: white;
+            margin-bottom: 40px;
+            float: right;
+            margin-bottom: 40px;
+            padding: 5px;
+        }
+
+        .outer-paragraph {
+            width: 600px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .paragraph {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            margin-top: 50px;
+            max-width: 100%;
+            font-size: 50px;
+            margin-left: 20px;
+
+
+        }
+
+        .btn {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .btn a {
+            text-decoration: none;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            row-gap: 0px;
+            column-gap: 5px;
+            margin-top: 100px;
+        }
+
+        .about {
+            background-color: #0000FF;
+            padding: 100px;
+            margin-top: 300px;
+
+        }
+
+        .about :hover {
+            background-color: rgba(255, 255, 255, 0.705);
+            box-shadow: 0px 4px 8px white;
+            color: white;
+            transition: 0.3s ease;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">Makutano</div>
+
+    <div class="outer">
+        <div class='d1'><a href="http://127.0.0.1:8000/security">Security</a></div>
+        <div class='d1'><a href="http://127.0.0.1:8000/health">Health</a></div>
+        <div class='d1'><a href="http://127.0.0.1:8000/edu">Education</a></div>
+        <div class='d1'><a href="http://127.0.0.1:8000/enter">Entertainment</a></div>
+
+    </div>
+
+    <div class="paragraph">
+        <p>
+            <span>Making our community a conducive place for communication and problem solving</span> <br>
+            <span>The community is concerned about day to day issues that affect its members </span> <br>
+            <span>It also allows us to report emergency alerts through our chat application</span> <br>
+        </p>
+    </div>
+    </div>
+    <div class="buttons">
+        <div class="btn"> <a href="http://127.0.0.1:8000/login">Join our community</a></div>
+        <div class="btn"> <a href="http://127.0.0.1:8000/engage">Engage with us</a></div>
+        <div class="btn"> <a href="http://127.0.0.1:8000/infra">Events</a></div>
+
+
+    </div>
+    <div class="about">
+        <a href="http://127.0.0.1:8000/about"
+            style="text-decoration:none ; color: antiquewhite; font-size: 20px; padding-left: 0;">About the community
+        </a>
+    </div>
+
+
+</body>
+
+</html>

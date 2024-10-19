@@ -1,0 +1,146 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            color: whitesmoke;
+            font-weight: bold;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        body {
+            background-color: #002D62;
+            height: 2000px
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 5px;
+            row-gap: 5px;
+
+        }
+
+        .d1 {
+            background-color: white;
+            display: flex;
+            max-width: 200px;
+            flex-direction: column;
+            max-height: 200px;
+            padding: 40px;
+        }
+
+        .d2 {
+            background-color: white;
+            max-width: 200px;
+            max-height: 200px;
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+        }
+
+        .d3 {
+            background-color: white;
+            max-width: 200px;
+            max-height: 200px;
+            flex-direction: column;
+            display: flex;
+            padding: 40px;
+        }
+
+        .float {
+            float: right;
+        }
+        .messages{
+            display: block;
+            background-color: #6CB4EE;
+            margin-top: 10px;
+            padding: 100px;
+            align-items: center;
+
+        }
+        .msg{
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            display: block;
+            color: white;
+            font-size: 30px;
+        }
+        .text{
+            padding: 30px;
+            display: block;
+
+        }
+        .submit{
+            border-radius: 10px;
+            margin-top: 3px;
+
+        }
+        .submit:hover {
+    background-color: blue; 
+    box-shadow: 0px 4px 8px white; 
+    color: white; 
+    transition: 0.3s ease; 
+    cursor: pointer;
+}
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <p> Our Safety is our Responsibility</p>
+    </div>
+    <div>
+        <p style="color: white; font-size: 50px;">Emergency services:
+        </p>
+    </div>
+    <div class="grid">
+        <div class="d1">
+            <div>
+                <p style="font-size: 30px; ">Ambulance</p>
+            </div>
+            <div>
+                <p style="font-size: 30px;">Contacts: 112</p>
+            </div>
+        </div>
+        <div class="d2">
+            <div>
+                <p style="font-size: 30px; ">Police</p>
+            </div>
+            <div>
+                <p style="font-size: 30px; ">Contacts: 999</p>
+            </div>
+        </div>
+        <div class="d3">
+            <p style="font-size: 30px;">Fire Department</p>
+            <div>
+                <p style="font-size: 30px; ">Contacts: 112</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="messages"> {% for message in messages %}
+       <div class="msg"><p>{{message.message}}</p> 
+    </div>
+        {% endfor %}
+    </div>
+
+    <div class="float">
+        <p style="color: red; font-size: 30px;">Report an issue!!</p>
+        <form method="post">
+            {% csrf_token %}
+            <input class="text" type="text" name="txt">
+            <input type="submit" class="submit">
+        </form>
+    </div>
+
+</body>
+
+</html>
